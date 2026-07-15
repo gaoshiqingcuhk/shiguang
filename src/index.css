@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --color-cream: #fffdf7;
+  --color-paper: #f8fafc;
+  --color-ink: #263445;
+  --color-book-blue: #2f80b7;
+  --color-book-blue-soft: #e7f2fa;
+  --color-leaf-green: #2a9d8f;
+  --color-leaf-soft: #e8f6f3;
+  --color-sun-yellow: #f6c85f;
+  --color-attention-orange: #f59e42;
+  --color-rose-soft: #d96c75;
+  --color-brand-50: #e7f2fa;
+  --color-brand-100: #d5eaf6;
+  --color-brand-200: #add5ec;
+  --color-brand-500: #3b82c4;
+  --color-brand-600: #2f80b7;
+  --color-brand-700: #246895;
+  --color-warm-50: #fffbeb;
+  --color-warm-400: #fbbf24;
+  --color-warm-500: #f59e0b;
+  --color-mint-50: #ecfdf5;
+  --color-mint-500: #10b981;
+  --color-sky-50: #f0f9ff;
+  --color-sky-500: #0ea5e9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: var(--font-sans);
+  background:
+    radial-gradient(circle at top left, rgba(246, 200, 95, 0.16), transparent 34rem),
+    linear-gradient(160deg, #fffdf7 0%, #f8fafc 48%, #eef8f5 100%);
+  color: #263445;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgba(246, 200, 95, 0.45);
+  color: #263445;
+}
+
+:focus-visible {
+  outline: 3px solid rgba(47, 128, 183, 0.35);
+  outline-offset: 3px;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+img,
+svg,
+video,
+canvas {
+  max-width: 100%;
+}
+
+p,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: anywhere;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-fade-up {
+  animation: fade-up 0.5s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+@media print {
+  header,
+  footer,
+  button,
+  .no-print {
+    display: none !important;
+  }
+
+  body {
+    background: #fff !important;
+    color: #111827;
+  }
+
+  main {
+    padding: 0 !important;
+  }
+
+  * {
+    box-shadow: none !important;
+  }
+}
