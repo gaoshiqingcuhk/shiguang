@@ -7,6 +7,8 @@ import { IconIllustration } from '../components/IconIllustration'
 import { PageHero } from '../components/PageHero'
 import { SectionHeader } from '../components/SectionHeader'
 
+const releaseBase = 'https://github.com/gaoshiqingcuhk/shiguang/releases/download/intervention-materials-v1'
+
 const interventionPacks = [
   {
     id: 'ran',
@@ -14,9 +16,9 @@ const interventionPacks = [
     subtitle: '命名速度与视觉-语言提取练习',
     description:
       '适合在老师或家长陪伴下，围绕数字、颜色、图片等材料进行短时、低压力的快速命名练习。材料包包含教案、课件和部分视频素材，因此文件较大。',
-    path: 'https://shiguang-materials.oss-cn-shenzhen.aliyuncs.com/ran.zip',
+    path: `${releaseBase}/ran.zip`,
     filename: 'RAN快速命名干预材料.zip',
-    size: '约 918 MB',
+    size: '约 1.0 GB',
     icon: 'timer' as const,
     variant: 'soft' as const,
     includes: ['15 课教案', '12 课课件', '视频 / 音频素材'],
@@ -32,9 +34,9 @@ const interventionPacks = [
     subtitle: '音节、声母韵母与音素操作',
     description:
       '用于支持孩子觉察和操作普通话语音结构，例如音节分解、声母韵母辨析、音素分割、省略与组合，适合与声韵母重组任务后的观察一起使用。',
-    path: 'https://shiguang-materials.oss-cn-shenzhen.aliyuncs.com/phonological-awareness.zip',
+    path: `${releaseBase}/phonological-awareness.zip`,
     filename: '语音意识干预材料.zip',
-    size: '约 1.1 MB',
+    size: '约 1.6 MB',
     icon: 'sound' as const,
     variant: 'default' as const,
     includes: ['14 个课次相关教案', '13 份课件', '音素分割等练习'],
@@ -50,9 +52,9 @@ const interventionPacks = [
     subtitle: '笔画、部件、结构与形声线索',
     description:
       '用于支持孩子观察汉字的笔画、部件位置、左右上下结构、形旁声旁和形近字差异，适合与认字、听写和错字整理结合使用。',
-    path: 'https://shiguang-materials.oss-cn-shenzhen.aliyuncs.com/orthographic-awareness.zip',
+    path: `${releaseBase}/orthographic-awareness.zip`,
     filename: '正字法意识干预材料.zip',
-    size: '约 121 MB',
+    size: '约 124 MB',
     icon: 'book' as const,
     variant: 'highlight' as const,
     includes: ['15 课教案', '配套课件', 'PDF / Word 教案文件'],
@@ -68,9 +70,9 @@ const interventionPacks = [
     subtitle: '词义、组词与语素拆分组合',
     description:
       '用于帮助孩子把汉字、词语和意义联系起来，练习组词、词义辨析、语素拆分与组合，适合作为阅读理解和词汇支持材料。',
-    path: 'https://shiguang-materials.oss-cn-shenzhen.aliyuncs.com/morpheme-awareness.zip',
+    path: `${releaseBase}/morpheme-awareness.zip`,
     filename: '语素意识干预材料.zip',
-    size: '约 38 MB',
+    size: '约 39 MB',
     icon: 'support' as const,
     variant: 'success' as const,
     includes: ['15 课教案', '配套课件', '总复习材料'],
